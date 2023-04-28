@@ -32,7 +32,7 @@ export class GoogleService {
 
       res.cookie('access_token', accessToken, {
         httpOnly: true,
-        sameSite: false,
+        sameSite: "none",
         secure: true,
         expires: expiration,
       });
@@ -43,7 +43,7 @@ export class GoogleService {
 
       res.cookie('user_data', userData, {
         httpOnly: false,
-        sameSite: false,
+        sameSite: "none",
         secure: true,
         expires: expiration,
       });
