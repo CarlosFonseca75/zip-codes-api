@@ -71,7 +71,7 @@ export class PlansService {
       }
 
       // Create plan.
-      const newPlan = this.plansModel.create(data);
+      const newPlan = await this.plansModel.create(data);
 
       return {
         message: 'Plan created successfully.',
@@ -80,6 +80,7 @@ export class PlansService {
         httpStatus: HttpStatus.CREATED,
       };
     } catch (e: any) {
+      console.log(e);
       return {
         message: 'An error occurred while creating the plan.',
         error: true,

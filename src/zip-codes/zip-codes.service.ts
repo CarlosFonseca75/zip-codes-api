@@ -71,7 +71,7 @@ export class ZipCodesService {
       }
 
       // Create zip code.
-      const newZipCode = this.zipCodeModel.create(data);
+      const newZipCode = await this.zipCodeModel.create(data);
 
       return {
         message: 'Zip code created successfully.',
