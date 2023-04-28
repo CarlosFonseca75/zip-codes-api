@@ -69,8 +69,21 @@ export class GoogleService {
   googleLogout(res: Response): ApiResponse<any> {
     try {
       // Remove cookies.
-      res.clearCookie('access_token');
-      res.clearCookie('user_data');
+      res.cookie('access_token', '', {
+        httpOnly: true,
+        sameSite: 'none',
+        secure: true,
+        expires: new Date(0),
+        maxAge: -1,
+      });
+
+      res.cookie('user_data', '', {
+        httpOnly: true,
+        sameSite: 'none',
+        secure: true,
+        expires: new Date(0),
+        maxAge: -1,
+      });
       
       // End.
       res.end();
