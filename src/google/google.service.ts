@@ -32,7 +32,7 @@ export class GoogleService {
 
       res.cookie('access_token', accessToken, {
         httpOnly: true,
-        sameSite: "none",
+        sameSite: 'none',
         secure: true,
         expires: expiration,
       });
@@ -84,16 +84,13 @@ export class GoogleService {
         expires: new Date(0),
         maxAge: -1,
       });
-      
-      // End.
-      res.end();
 
       // Success.
-      return {
+      res.status(HttpStatus.OK).json({
         message: 'Logged out successfully.',
         error: false,
         httpStatus: HttpStatus.OK,
-      };
+      }).end();
     } catch (error) {
       console.error(`Error: ${error.message}`);
       return {
