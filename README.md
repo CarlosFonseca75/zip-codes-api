@@ -25,4 +25,6 @@ npm install
 npm run start:dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Additionally, be sure that you have added the **.env** file necessary to run this API.
+
+Open [http://localhost:4000/health](http://localhost:4000/health) with your browser to see the result.
