@@ -31,9 +31,8 @@ export class GoogleService {
       const accessToken = req.user.accessToken;
 
       res.cookie('access_token', accessToken, {
-        domain: 'zip-codes-api.vercel.app',
         httpOnly: true,
-        sameSite: 'none',
+        sameSite: "none",
         secure: true,
         expires: expiration,
       });
@@ -43,9 +42,8 @@ export class GoogleService {
       const userData = { email, firstname, lastname };
 
       res.cookie('user_data', userData, {
-        domain: 'zip-codes-api.vercel.app',
         httpOnly: true,
-        sameSite: 'none',
+        sameSite: "none",
         secure: true,
         expires: expiration,
       });
@@ -72,7 +70,6 @@ export class GoogleService {
     try {
       // Remove cookies.
       res.cookie('access_token', '', {
-        domain: 'zip-codes-api.vercel.app',
         httpOnly: true,
         sameSite: 'none',
         secure: true,
@@ -81,7 +78,6 @@ export class GoogleService {
       });
 
       res.cookie('user_data', '', {
-        domain: 'zip-codes-api.vercel.app',
         httpOnly: true,
         sameSite: 'none',
         secure: true,
