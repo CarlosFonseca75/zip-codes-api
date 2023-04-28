@@ -90,7 +90,7 @@ export class GoogleService {
         message: 'Logged out successfully.',
         error: false,
         httpStatus: HttpStatus.OK,
-      }).end();
+      });
     } catch (error) {
       console.error(`Error: ${error.message}`);
       return {

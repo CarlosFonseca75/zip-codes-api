@@ -16,6 +16,12 @@ different services to manage plans, zip codes and prices.
 * **Passport with Google:** A middleware for Node.js that provides authentication and authorization for Google accounts.
 * **Jest:** A testing framework for JavaScript that focuses on simplicity and ease of use.
 
+## Testing.
+This project has included unit testing for our plans, zip codes and prices services. To run the tests, run the following command:
+```bash
+npm run test
+```
+
 ## Getting Started.
 To run the API locally, run the following commands.
 
