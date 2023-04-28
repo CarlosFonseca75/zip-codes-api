@@ -86,7 +86,11 @@ export class GoogleService {
       });
 
       // Success.
-      res.end();
+      res.status(HttpStatus.OK).send({
+        message: 'Logged out successfully.',
+        error: false,
+        httpStatus: HttpStatus.OK,
+      });
     } catch (error) {
       console.error(`Error: ${error.message}`);
       return {
