@@ -1,6 +1,6 @@
 // Dependencies.
 import { NestFactory } from '@nestjs/core';
-import * as cookieParser from 'cookie-parser';
+import cookieParser from 'cookie-parser';
 
 // Modules.
 import { AppModule } from './app.module';
@@ -11,7 +11,7 @@ async function bootstrap() {
 
   // Cors.
   app.enableCors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://zip-codes-app.vercel.app'],
     credentials: true,
   });
 
