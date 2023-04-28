@@ -42,7 +42,7 @@ export class GoogleService {
       const userData = { email, firstname, lastname };
 
       res.cookie('user_data', userData, {
-        httpOnly: false,
+        httpOnly: true,
         sameSite: "none",
         secure: true,
         expires: expiration,
